@@ -13,7 +13,10 @@ This is a **web-based quiz application** built with **React.js**, featuring an i
 ## 🎥 Video Walkthrough
 
 
-https://github.com/user-attachments/assets/740b8cf8-d437-4f70-a4b3-779ccc4ed6d5
+
+https://github.com/user-attachments/assets/61bb0dce-b399-4398-9533-3b086619a888
+
+
 
 
 ## 🔥 Features Implemented
