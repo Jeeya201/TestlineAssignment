@@ -1,0 +1,230 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6f5ff 0%, #eae6ff 100%);
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(82, 40, 245, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(82, 40, 245, 0.15);
+}
+
+.welcome-card h1 {
+  color: #4318FF;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  animation: slideIn 0.8s ease-out;
+  background: linear-gradient(45deg, #4318FF, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.welcome-card p {
+  color: #6C6C6C;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  animation: slideIn 0.8s ease-out 0.2s backwards;
+}
+
+.start-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #4318FF, #9c27b0);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s backwards;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(0.3); }
+  50% { transform: scale(1.1); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.start-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(67, 24, 255, 0.25);
+}
+
+.start-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.start-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Decorative Elements */
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.leaf {
+  position: absolute;
+  background: linear-gradient(45deg, #4318FF, #9c27b0);
+  opacity: 0.1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.leaf-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: 10%;
+  transform: rotate(45deg);
+  animation-delay: -2s;
+}
+
+.leaf-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: 15%;
+  transform: rotate(-30deg);
+  animation-delay: -1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4318FF, #9c27b0);
+  opacity: 0.1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 20%;
+}
+
+.circle-2 {
+  width: 50px;
+  height: 50px;
+  bottom: 30%;
+  right: 25%;
+}
+
+.paper-plane {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 30%;
+  right: 30%;
+  background: #4318FF;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  animation: flyAround 12s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+@keyframes flyAround {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(100px, -50px) rotate(45deg); }
+  50% { transform: translate(200px, 0) rotate(0deg); }
+  75% { transform: translate(100px, 50px) rotate(-45deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 2rem;
+  }
+
+  .welcome-card h1 {
+    font-size: 2rem;
+  }
+
+  .leaf-1, .leaf-2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-card {
+    padding: 1.5rem;
+  }
+
+  .welcome-card h1 {
+    font-size: 1.75rem;
+  }
+
+  .start-button {
+    padding: 0.8rem 2rem;
+  }
+} 
