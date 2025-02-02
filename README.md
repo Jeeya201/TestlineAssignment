@@ -4,12 +4,17 @@
 This is a **web-based quiz application** built with **React.js**, featuring an intuitive UI and engaging **gamification elements**. The app dynamically fetches quiz questions from an **API** and presents them with a modern, interactive experience.
 
 ## 📸 Screenshots
-![Quiz Home](https://your-image-link.com/quiz-home.png)
-![Question Page](https://your-image-link.com/question-page.png)
-![Results Page](https://your-image-link.com/results-page.png)
+![Screenshot (34)](https://github.com/user-attachments/assets/6890e7a4-26df-449b-a6f7-fd04d5cbae96)
+![Screenshot (33)](https://github.com/user-attachments/assets/a2f6f696-90c8-4f62-8808-ff28748da72e)
+![Screenshot (32)](https://github.com/user-attachments/assets/dfb3724d-7244-48ca-8aa3-72ff16d3a2e5)
+![Screenshot (30)](https://github.com/user-attachments/assets/657dd0e3-687c-42c7-bb41-f4254e6e00c2)
+
 
 ## 🎥 Video Walkthrough
-[Watch Demo](https://your-video-link.com)
+
+
+https://github.com/user-attachments/assets/740b8cf8-d437-4f70-a4b3-779ccc4ed6d5
+
 
 ## 🔥 Features Implemented
 ### 🎮 Core Features
